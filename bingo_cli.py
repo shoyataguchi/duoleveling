@@ -47,12 +47,12 @@ if not validate():
 print("Config values are valid!")
 
 # Prepare 5x5 list of lists
-dummy_card = [
-    [7, 22, 31, 50, 68],
-    [3, 18, 42, 58, 71],
-    [12, 29, -1, 47, 62],
-    [9, 16, 35, 53, 75],
-    [1, 25, 40, 49, 61]
-]
+dummy_card = [7, 22, 31, 50, 68, 3, 18, 42, 58, 71, 12, 29, -1, 47, 62, 9, 16, 35, 53, 75, 1, 25, 40, 49, 61]
+
 # Print the card.
-display_card(dummy_card)
+data = 0
+for x in range(CARD_SIZE):
+    for y in range(CARD_SIZE):
+            print(f"{dummy_card[data]:>3}", end=" ")
+            data += 1
+    print()
